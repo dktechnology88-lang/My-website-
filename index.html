@@ -1,229 +1,195 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
-  <meta content="mobile_tab" name="shell-type"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>Skyline Careers - Overseas Recruitment Consultancy Vapi</title>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
+  <script>
     tailwind.config = { 
-      darkMode: "class", 
       theme: { 
         extend: { 
-          "colors": { 
-            "primary": "#006194", 
-            "surface-container": "#e5eeff", 
-            "primary-container": "#007bb9", 
-            "secondary-container": "#dae2fd", 
-            "secondary": "#565e74", 
-            "surface-container-low": "#eff4ff", 
-            "surface-variant": "#d3e4fe", 
-            "outline": "#707881", 
-            "surface-container-lowest": "#ffffff", 
-            "on-surface": "#0b1c30", 
-            "on-surface-variant": "#3f4850", 
-            "surface-container-high": "#dce9ff", 
-            "surface": "#f8f9ff" 
-          }, 
-          "fontFamily": { 
-            "body-sm": ["Plus Jakarta Sans"], 
-            "headline-sm": ["Plus Jakarta Sans"], 
-            "label-md": ["Plus Jakarta Sans"], 
-            "title-md": ["Plus Jakarta Sans"], 
-            "headline-lg-mobile": ["Plus Jakarta Sans"]
+          colors: { 
+            primary: "#006194", 
+            surface: "#f8f9ff", 
+            cardBg: "#ffffff"
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif']
           }
         } 
       } 
     };
   </script>
-  <style>
-    @layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}
-  </style>
 </head>
 
-<body class="bg-surface text-on-surface flex flex-col min-h-screen">
+<body class="bg-surface text-gray-900 font-sans min-h-screen flex flex-col antialiased">
   
   <!-- Floating WhatsApp Support Button -->
-  <a href="https://wa.me/919998504479?text=Hi%20Skyline%20Careers,%20I%20want%20to%20apply%20for%20an%20Overseas%20Job." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform active:scale-95" aria-label="WhatsApp Support">
-    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+  <a href="https://wa.me/919998504479?text=Hi%20Skyline%20Careers,%20I%20want%20to%20apply%20for%20an%20Overseas%20Job." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-transform" aria-label="WhatsApp Support">
+    <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
       <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.169 5.291-1.387c1.467.8 3.118 1.222 4.781 1.223h.004c5.506 0 9.989-4.478 9.99-9.984 0-2.667-1.038-5.175-2.924-7.062a9.924 9.924 0 0 0-7.058-2.944zm5.184 14.195c-.214.601-1.248 1.157-1.722 1.205-.474.048-1.077.227-3.568-.781-2.983-1.207-4.887-4.242-5.037-4.442-.15-.2-1.218-1.621-1.218-3.092 0-1.471.768-2.195 1.042-2.493.274-.298.599-.373.799-.373.2 0 .4.002.574.011.184.01.428-.07.67.51.248.59.845 2.062.919 2.212.075.15.125.325.025.525-.1.2-.15.325-.299.5-.15.175-.315.391-.45.525-.15.15-.307.313-.132.613.175.3 0.778 1.284 1.67 2.08 1.147 1.022 2.112 1.338 2.412 1.488.3.15.475.125.65-.075.175-.2.749-.873.949-1.173.2-.3.4-.25.673-.15.275.1.1.748.871 3.593 1.742.846.871.075.125.175.2.225.225.6.025 1.201-.189 1.802z"/>
     </svg>
   </a>
 
   <!-- Header -->
-  <header class="fixed top-0 w-full z-40 pt-safe bg-surface/80 backdrop-blur-xl shadow-sm">
-    <div class="h-16 px-4 flex items-center justify-between gap-2">
-      <div class="flex items-center gap-2 min-w-0">
-        <img alt="Brand logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V5oCkq2eW5QNJbHEO1xU0uMVlu6Mn0maMxGmaMP_N_qzOK3ALW4lwb7esd0deo9moA09ifwf4G1oAAjYoJV_YyjeSdi_WfEQzoLi4YSgNayQme1pDelvpkhHatVbDTgsCJzUvEtZB8k6I-nMN7EcoSzD8BSgmNoIXVFxQj5YiE2Ci6iULdVg_VdenX29X2SX7jCmeUg0meAVbOW1bYvkAxI9UbYr-7OED8nS7gGorO"/>
-        <div class="flex flex-col min-w-0">
-          <span class="text-[11px] font-bold text-primary tracking-wider uppercase truncate">Skyline Careers</span>
-          <h1 class="font-semibold text-xs text-on-surface truncate">Vapi, Gujarat • Overseas Jobs</h1>
+  <header class="sticky top-0 w-full z-40 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+    <div class="max-w-4xl mx-auto px-4 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img alt="Brand logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1V5oCkq2eW5QNJbHEO1xU0uMVlu6Mn0maMxGmaMP_N_qzOK3ALW4lwb7esd0deo9moA09ifwf4G1oAAjYoJV_YyjeSdi_WfEQzoLi4YSgNayQme1pDelvpkhHatVbDTgsCJzUvEtZB8k6I-nMN7EcoSzD8BSgmNoIXVFxQj5YiE2Ci6iULdVg_VdenX29X2SX7jCmeUg0meAVbOW1bYvkAxI9UbYr-7OED8nS7gGorO"/>
+        <div>
+          <span class="text-xs font-extrabold text-primary tracking-wider uppercase block">Skyline Careers</span>
+          <span class="text-xs text-gray-500 font-medium">Vapi, Gujarat • Overseas Consultancy</span>
         </div>
       </div>
-      <div class="flex items-center gap-2 shrink-0">
-        <a aria-label="Call Support" class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" href="tel:+919998504479">
-          <span class="material-symbols-outlined text-[20px]">call</span>
-        </a>
-      </div>
+      <a aria-label="Call Support" class="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-primary hover:bg-primary hover:text-white transition-colors" href="tel:+919998504479">
+        <span class="material-symbols-outlined text-xl">call</span>
+      </a>
     </div>
   </header>
 
-  <main class="flex-1 w-full bg-surface pt-16 pb-20 flex flex-col">
-    <div class="flex flex-col w-full">
+  <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-1 space-y-6">
+    
+    <!-- Hero Section -->
+    <section class="bg-white rounded-2xl p-5 md:p-6 shadow-sm border border-gray-100">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-primary text-xs font-bold mb-3">
+        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+        Main Office: Vapi, Gujarat
+      </div>
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 leading-tight mb-2">
+        Overseas Recruitment &amp; Gulf Job Consultancy
+      </h1>
+      <p class="text-sm text-gray-600 mb-5">
+        We provide manpower &amp; visa services for Dubai, Qatar, Kuwait, Saudi Arabia, Europe &amp; USA.
+      </p>
+
+      <!-- Job Search Widget -->
+      <div class="bg-gray-50 rounded-xl p-4 border border-gray-200/60 space-y-3">
+        <div class="flex items-center bg-white rounded-lg px-3 py-2.5 border border-gray-200">
+          <span class="material-symbols-outlined text-gray-400 text-xl mr-2">search</span>
+          <input id="search-keyword" class="w-full bg-transparent text-sm focus:outline-none placeholder:text-gray-400 text-gray-800" placeholder="Job title or trade (e.g. Driver, Helper, Welder)" type="text"/>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+          <div class="flex items-center bg-white rounded-lg px-3 py-2 border border-gray-200">
+            <span class="material-symbols-outlined text-gray-400 text-lg mr-2">public</span>
+            <select id="select-hub" class="w-full bg-transparent text-xs font-semibold text-gray-700 focus:outline-none">
+              <option>Dubai (UAE)</option>
+              <option>Saudi Arabia</option>
+              <option>Qatar</option>
+              <option>Kuwait</option>
+              <option>Europe</option>
+              <option>USA</option>
+            </select>
+          </div>
+          <div class="flex items-center bg-white rounded-lg px-3 py-2 border border-gray-200">
+            <span class="material-symbols-outlined text-gray-400 text-lg mr-2">category</span>
+            <select id="select-sector" class="w-full bg-transparent text-xs font-semibold text-gray-700 focus:outline-none">
+              <option>All Sectors</option>
+              <option>Construction &amp; Technical</option>
+              <option>Drivers &amp; Operators</option>
+              <option>Oil &amp; Gas</option>
+              <option>Hospitality &amp; Hotel</option>
+            </select>
+          </div>
+        </div>
+
+        <button id="find-jobs-btn" class="w-full h-11 rounded-lg bg-primary text-white font-bold text-sm flex items-center justify-center gap-2 shadow hover:bg-sky-800 active:scale-[0.99] transition-all" type="button">
+          <span class="material-symbols-outlined text-xl">search</span>
+          Search Overseas Vacancies
+        </button>
+      </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-4">
       
-      <!-- Top Office & Hero Section -->
-      <section class="px-4 pt-4 pb-6">
-        <div class="flex items-center gap-2 mb-2">
-          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary text-xs font-bold">
-            <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-            Office: Vapi, Gujarat (India)
-          </span>
+      <!-- Candidate Card -->
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-2.5 py-1 rounded bg-blue-50 text-primary text-[11px] font-bold tracking-wide uppercase">CANDIDATES</span>
+            <span class="material-symbols-outlined text-primary text-2xl">flight_takeoff</span>
+          </div>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">For Job Seekers</h2>
+          <ul class="space-y-2 mb-5 text-xs text-gray-600">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-base">verified</span>
+              Direct Client Interviews at Vapi Office
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-base">assignment_turned_in</span>
+              Visa Processing &amp; Documentation Support
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-primary text-base">public</span>
+              Dubai, Qatar, Kuwait, Saudi, Europe &amp; USA Placements
+            </li>
+          </ul>
         </div>
-        <h1 class="text-2xl font-bold text-on-surface tracking-tight mb-2">
-          Overseas Recruitment &amp; Gulf Job Consultancy
-        </h1>
-        <p class="text-sm text-on-surface-variant mb-4">
-          Based in Vapi, Gujarat. We process manpower &amp; visas for top companies across Dubai, Gulf &amp; Western countries.
-        </p>
+        
+        <!-- Direct WhatsApp Submit Button -->
+        <a href="https://wa.me/919998504479?text=Hi%20Skyline%20Careers,%20I%20want%20to%20submit%20my%20CV%20for%20International%20Job%20Vacancies." target="_blank" class="w-full h-11 rounded-xl bg-primary text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md hover:bg-sky-800 active:scale-95 transition-all">
+          <span class="material-symbols-outlined text-xl">send</span>
+          <span>Submit Your CV (WhatsApp)</span>
+        </a>
+      </div>
 
-        <!-- Mobile Job Search Widget -->
-        <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm space-y-3">
-          <div class="relative flex items-center bg-surface-container-low rounded-lg px-3 py-2">
-            <span class="material-symbols-outlined text-outline text-[20px] mr-2">search</span>
-            <input id="search-keyword" class="w-full bg-transparent text-on-surface text-sm focus:outline-none placeholder:text-outline" placeholder="Job title, trade or skill (e.g. Driver, Helper)" type="text"/>
+      <!-- Employer Card -->
+      <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-2.5 py-1 rounded bg-gray-100 text-gray-700 text-[11px] font-bold tracking-wide uppercase">EMPLOYERS</span>
+            <span class="material-symbols-outlined text-gray-700 text-2xl">domain</span>
           </div>
-          <div class="grid grid-cols-2 gap-2">
-            <div class="relative flex items-center bg-surface-container-low rounded-lg px-3 py-2">
-              <span class="material-symbols-outlined text-outline text-[18px] mr-1">public</span>
-              <select id="select-hub" class="w-full bg-transparent text-on-surface text-xs font-semibold focus:outline-none appearance-none pr-3">
-                <option>Dubai (UAE)</option>
-                <option>Qatar</option>
-                <option>Kuwait</option>
-                <option>Saudi Arabia</option>
-                <option>Europe</option>
-                <option>USA</option>
-              </select>
-            </div>
-            <div class="relative flex items-center bg-surface-container-low rounded-lg px-3 py-2">
-              <span class="material-symbols-outlined text-outline text-[18px] mr-1">category</span>
-              <select id="select-sector" class="w-full bg-transparent text-on-surface text-xs font-semibold focus:outline-none appearance-none pr-3">
-                <option>All Sectors</option>
-                <option>Oil &amp; Gas</option>
-                <option>Construction</option>
-                <option>Drivers &amp; Operators</option>
-                <option>Hospitality &amp; Hotel</option>
-                <option>Technical &amp; Trades</option>
-              </select>
-            </div>
-          </div>
-          <button id="find-jobs-btn" class="w-full h-11 rounded-lg bg-primary text-white font-bold text-sm flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform" type="button">
-            <span class="material-symbols-outlined text-[20px]">search</span>
-            Search Foreign Vacancies
-          </button>
+          <h2 class="text-lg font-bold text-gray-900 mb-2">For Overseas Clients</h2>
+          <ul class="space-y-2 mb-5 text-xs text-gray-600">
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-gray-700 text-base">badge</span>
+              Skilled &amp; Technical Workforce Sourcing from India
+            </li>
+            <li class="flex items-center gap-2">
+              <span class="material-symbols-outlined text-gray-700 text-base">gavel</span>
+              Trade Testing, Medical &amp; Fast-Track Deployment
+            </li>
+          </ul>
         </div>
-      </section>
+        
+        <a class="w-full h-11 rounded-xl bg-gray-900 text-white font-bold text-xs flex items-center justify-center gap-2 shadow hover:bg-gray-800 transition-all" href="tel:+919998504479">
+          <span>Contact Vapi Desk</span>
+          <span class="material-symbols-outlined text-base">call</span>
+        </a>
+      </div>
 
-      <!-- Quick Action Cards: Candidate & Employer -->
-      <section class="px-4 mb-6">
-        <div class="grid grid-cols-1 gap-4">
-          
-          <!-- Candidate Card -->
-          <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between border border-outline/10">
-            <div class="flex items-start justify-between mb-3">
-              <div>
-                <span class="inline-block px-2 py-0.5 rounded bg-surface-container text-primary text-[10px] font-bold tracking-wider uppercase mb-1">CANDIDATES</span>
-                <h2 class="text-lg font-bold text-on-surface">For Job Seekers</h2>
-              </div>
-              <div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
-                <span class="material-symbols-outlined text-[22px]">flight_takeoff</span>
-              </div>
-            </div>
-            <ul class="space-y-2 mb-4 text-xs text-on-surface-variant">
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
-                Direct Company Selection &amp; Client Interviews in Vapi
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[18px]">assignment_turned_in</span>
-                Complete Visa Processing &amp; Documentation Guidance
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-primary text-[18px]">public</span>
-                Placements in Dubai, Qatar, Kuwait, Saudi, Europe &amp; USA
-              </li>
-            </ul>
-            
-            <!-- Direct WhatsApp CV Submission -->
-            <a href="https://wa.me/919998504479?text=Hi%20Skyline%20Careers,%20I%20want%20to%20submit%20my%20CV%20for%20International%20Job%20Vacancies." target="_blank" class="w-full h-11 rounded-lg bg-primary text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform">
-              <span class="material-symbols-outlined text-[20px]">send</span>
-              <span>Submit Your CV (WhatsApp)</span>
-            </a>
-          </div>
+    </section>
 
-          <!-- Employer Card -->
-          <div class="bg-surface-container-lowest rounded-xl p-4 shadow-sm relative overflow-hidden flex flex-col justify-between border border-outline/10">
-            <div class="flex items-start justify-between mb-3">
-              <div>
-                <span class="inline-block px-2 py-0.5 rounded bg-surface-container-high text-secondary text-[10px] font-bold tracking-wider uppercase mb-1">CLIENTS &amp; AGENTS</span>
-                <h2 class="text-lg font-bold text-on-surface">For Overseas Employers</h2>
-              </div>
-              <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-secondary">
-                <span class="material-symbols-outlined text-[22px]">domain</span>
-              </div>
-            </div>
-            <ul class="space-y-2 mb-4 text-xs text-on-surface-variant">
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary text-[18px]">badge</span>
-                Skilled &amp; Unskilled Manpower Supply from India
-              </li>
-              <li class="flex items-center gap-2">
-                <span class="material-symbols-outlined text-secondary text-[18px]">gavel</span>
-                Fast-Track Trade Testing &amp; Medical Processing
-              </li>
-            </ul>
-            <a class="w-full h-10 rounded-lg bg-on-surface text-white font-bold text-xs flex items-center justify-center gap-2 shadow-sm" href="tel:+919998504479">
-              <span>Contact Vapi Office Desk</span>
-              <span class="material-symbols-outlined text-[16px]">call</span>
-            </a>
-          </div>
-
+    <!-- Destinations Grid -->
+    <section class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100">
+      <h2 class="text-base font-bold text-gray-900 mb-3">Popular Foreign Destinations</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+        <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <span class="font-bold text-xs text-gray-900 block">Dubai (UAE)</span>
+          <span class="text-[10px] text-gray-500">Hotel, Drivers, Trade</span>
         </div>
-      </section>
-
-      <!-- Key Destination Verticals -->
-      <section class="px-4 mb-6">
-        <div class="flex items-center justify-between mb-3">
-          <div>
-            <span class="text-[10px] font-bold text-primary uppercase tracking-wider block">Overseas Destinations</span>
-            <h2 class="text-base font-bold text-on-surface">Hiring Countries</h2>
-          </div>
+        <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <span class="font-bold text-xs text-gray-900 block">Saudi Arabia</span>
+          <span class="text-[10px] text-gray-500">Oil &amp; Gas, Mechanics</span>
         </div>
-        <div class="grid grid-cols-2 gap-2">
-          <div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm border border-outline/10">
-            <span class="text-sm font-bold text-on-surface block">Dubai (UAE)</span>
-            <span class="text-[11px] text-outline">Drivers, Hotel, Construction</span>
-          </div>
-          <div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm border border-outline/10">
-            <span class="text-sm font-bold text-on-surface block">Saudi Arabia</span>
-            <span class="text-[11px] text-outline">Oil &amp; Gas, Mechanics, Technicians</span>
-          </div>
-          <div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm border border-outline/10">
-            <span class="text-sm font-bold text-on-surface block">Qatar &amp; Kuwait</span>
-            <span class="text-[11px] text-outline">Engineers, Helpers, Staff</span>
-          </div>
-          <div class="bg-surface-container-lowest rounded-xl p-3 shadow-sm border border-outline/10">
-            <span class="text-sm font-bold text-on-surface block">Europe &amp; USA</span>
-            <span class="text-[11px] text-outline">Skilled Trades &amp; Professionals</span>
-          </div>
+        <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <span class="font-bold text-xs text-gray-900 block">Qatar &amp; Kuwait</span>
+          <span class="text-[10px] text-gray-500">Technicians, Helpers</span>
         </div>
-      </section>
+        <div class="p-3 bg-gray-50 rounded-xl border border-gray-100">
+          <span class="font-bold text-xs text-gray-900 block">Europe &amp; USA</span>
+          <span class="text-[10px] text-gray-500">Skilled Trades</span>
+        </div>
+      </div>
+    </section>
 
-    </div>
   </main>
 
   <script>
