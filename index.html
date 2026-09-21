@@ -1,247 +1,315 @@
-Index.html
 <!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <meta content="mobile_tab" name="shell-type"/>
+  <title>Skyline Careers</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = { 
+      darkMode: "class", 
+      theme: { 
+        extend: { 
+          "colors": { 
+            "primary": "#006194", 
+            "on-secondary-fixed-variant": "#3f465c", 
+            "error": "#ba1a1a", 
+            "error-container": "#ffdad6", 
+            "tertiary-fixed": "#c9e6ff", 
+            "surface-container": "#e5eeff", 
+            "tertiary": "#00628d", 
+            "primary-container": "#007bb9", 
+            "on-secondary-container": "#5c647a", 
+            "tertiary-container": "#007cb1", 
+            "secondary-container": "#dae2fd", 
+            "on-tertiary-fixed-variant": "#004c6e", 
+            "secondary": "#565e74", 
+            "outline-variant": "#bfc7d2", 
+            "surface-container-low": "#eff4ff", 
+            "surface-dim": "#cbdbf5", 
+            "surface-variant": "#d3e4fe", 
+            "primary-fixed": "#cce5ff", 
+            "secondary-fixed": "#dae2fd", 
+            "outline": "#707881", 
+            "surface-bright": "#f8f9ff", 
+            "surface-container-lowest": "#ffffff", 
+            "on-error-container": "#93000a", 
+            "tertiary-fixed-dim": "#89ceff", 
+            "on-primary-fixed-variant": "#004b73", 
+            "primary-fixed-dim": "#93ccff", 
+            "surface-container-highest": "#d3e4fe", 
+            "on-secondary": "#ffffff", 
+            "on-background": "#0b1c30", 
+            "on-tertiary-fixed": "#001e2f", 
+            "secondary-fixed-dim": "#bec6e0", 
+            "on-surface": "#0b1c30", 
+            "on-secondary-fixed": "#131b2e", 
+            "on-primary": "#ffffff", 
+            "on-surface-variant": "#3f4850", 
+            "surface-container-high": "#dce9ff", 
+            "on-tertiary-container": "#fcfcff", 
+            "inverse-on-surface": "#eaf1ff", 
+            "inverse-surface": "#213145", 
+            "surface": "#f8f9ff", 
+            "on-primary-fixed": "#001d31", 
+            "on-tertiary": "#ffffff", 
+            "background": "#f8f9ff", 
+            "on-primary-container": "#fdfcff", 
+            "surface-tint": "#006398", 
+            "on-error": "#ffffff", 
+            "inverse-primary": "#93ccff" 
+          }, 
+          "borderRadius": { 
+            "DEFAULT": "0.25rem", 
+            "lg": "0.5rem", 
+            "xl": "0.75rem", 
+            "full": "9999px" 
+          }, 
+          "spacing": { 
+            "margin": "2rem", 
+            "space-xl": "2.5rem", 
+            "gutter": "1.5rem", 
+            "space-xs": "0.25rem", 
+            "margin-mobile": "1rem", 
+            "gutter-mobile": "1rem", 
+            "space-lg": "1.5rem", 
+            "space-md": "1rem", 
+            "space-sm": "0.5rem" 
+          }, 
+          "fontFamily": { 
+            "label-caps": ["Plus Jakarta Sans"], 
+            "headline-sm": ["Plus Jakarta Sans"], 
+            "body-sm": ["Plus Jakarta Sans"], 
+            "headline-md": ["Plus Jakarta Sans"], 
+            "headline-lg": ["Plus Jakarta Sans"], 
+            "label-md": ["Plus Jakarta Sans"], 
+            "title-md": ["Plus Jakarta Sans"], 
+            "label-sm": ["Plus Jakarta Sans"], 
+            "body-md": ["Plus Jakarta Sans"], 
+            "headline-lg-mobile": ["Plus Jakarta Sans"], 
+            "display-hero-mobile": ["Plus Jakarta Sans"], 
+            "body-lg": ["Plus Jakarta Sans"], 
+            "display-hero": ["Plus Jakarta Sans"] 
+          }, 
+          "fontSize": { 
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }], 
+            "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], 
+            "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], 
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], 
+            "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], 
+            "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], 
+            "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], 
+            "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], 
+            "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], 
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], 
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "800" }], 
+            "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], 
+            "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }] 
+          } 
+        } 
+      } 
+    };
+  </script>
+  <style>
+    @layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+  </style>
+</head>
 
-<html class="light" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>Skyline Careers</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#006194", "on-secondary-fixed-variant": "#3f465c", "error": "#ba1a1a", "error-container": "#ffdad6", "tertiary-fixed": "#c9e6ff", "surface-container": "#e5eeff", "tertiary": "#00628d", "primary-container": "#007bb9", "on-secondary-container": "#5c647a", "tertiary-container": "#007cb1", "secondary-container": "#dae2fd", "on-tertiary-fixed-variant": "#004c6e", "secondary": "#565e74", "outline-variant": "#bfc7d2", "surface-container-low": "#eff4ff", "surface-dim": "#cbdbf5", "surface-variant": "#d3e4fe", "primary-fixed": "#cce5ff", "secondary-fixed": "#dae2fd", "outline": "#707881", "surface-bright": "#f8f9ff", "surface-container-lowest": "#ffffff", "on-error-container": "#93000a", "tertiary-fixed-dim": "#89ceff", "on-primary-fixed-variant": "#004b73", "primary-fixed-dim": "#93ccff", "surface-container-highest": "#d3e4fe", "on-secondary": "#ffffff", "on-background": "#0b1c30", "on-tertiary-fixed": "#001e2f", "secondary-fixed-dim": "#bec6e0", "on-surface": "#0b1c30", "on-secondary-fixed": "#131b2e", "on-primary": "#ffffff", "on-surface-variant": "#3f4850", "surface-container-high": "#dce9ff", "on-tertiary-container": "#fcfcff", "inverse-on-surface": "#eaf1ff", "inverse-surface": "#213145", "surface": "#f8f9ff", "on-primary-fixed": "#001d31", "on-tertiary": "#ffffff", "background": "#f8f9ff", "on-primary-container": "#fdfcff", "surface-tint": "#006398", "on-error": "#ffffff", "inverse-primary": "#93ccff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "margin": "2rem", "space-xl": "2.5rem", "gutter": "1.5rem", "space-xs": "0.25rem", "margin-mobile": "1rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem" }, "fontFamily": { "label-caps": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "display-hero-mobile": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "display-hero": ["Plus Jakarta Sans"] }, "fontSize": { "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "20px", "fontWeight": "400" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "title-md": ["16px", { "lineHeight": "24px", "fontWeight": "600" }], "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }], "body-md": ["15px", { "lineHeight": "24px", "fontWeight": "400" }], "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.015em", "fontWeight": "800" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "display-hero": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior-y:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Brand logo. - Primary color: #0284c7
-- Font: plusJakartaSans
-- Mode: light
-- Roundness: rounded-md
-" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V5oCkq2eW5QNJbHEO1xU0uMVlu6Mn0maMxGmaMP_N_qzOK3ALW4lwb7esd0deo9moA09ifwf4G1oAAjYoJV_YyjeSdi_WfEQzoLi4YSgNayQme1pDelvpkhHatVbDTgsCJzUvEtZB8k6I-nMN7EcoSzD8BSgmNoIXVFxQj5YiE2Ci6iULdVg_VdenX29X2SX7jCmeUg0meAVbOW1bYvkAxI9UbYr-7OED8nS7gGorO"/><div class="flex flex-col min-w-0"><span class="font-label-caps text-label-caps text-primary tracking-wider uppercase truncate">Skyline Careers</span><h1 class="font-title-md text-title-md text-on-surface truncate">Employment Services</h1></div></div><div class="flex items-center gap-space-xs shrink-0"><a aria-label="Call Support" class="w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed hover:bg-primary hover:text-on-primary transition-colors" href="tel:+918866421447"><span class="material-symbols-outlined text-[20px]">call</span></a><button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 w-full bg-surface pt-16 pb-24 flex flex-col"><div class="flex flex-col w-full">
-<!-- Top Region Badge & Hero Section -->
-<section class="px-gutter-mobile pt-space-md pb-space-lg">
-<div class="flex items-center gap-space-xs mb-space-sm">
-<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-caps text-label-caps">
-<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
-        South Gujarat's #1 Recruitment Partner
-      </span>
-</div>
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-space-xs">
-      Connecting Talent with Opportunity Across Industries
-    </h1>
-<p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
-      Leading placement &amp; workforce recruitment consultancy headquartered in Vapi. Zero candidate fee for job seekers.
-    </p>
-<!-- Quick Stat Pill Counters -->
-<div class="grid grid-cols-3 gap-space-xs mb-space-lg">
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col items-center text-center">
-<span class="font-headline-sm text-headline-sm text-primary font-extrabold">10k+</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Placed</span>
-</div>
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col items-center text-center">
-<span class="font-headline-sm text-headline-sm text-primary font-extrabold">500+</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">Clients</span>
-</div>
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col items-center text-center">
-<span class="font-headline-sm text-headline-sm text-primary font-extrabold">48h</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant">TAT Match</span>
-</div>
-</div>
-<!-- Mobile Job Search Widget -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
-<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-2">
-<span class="material-symbols-outlined text-outline text-[20px] mr-2">search</span>
-<input class="w-full bg-transparent text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-outline" placeholder="Designation, skill or keyword" type="text"/>
-</div>
-<div class="grid grid-cols-2 gap-space-xs">
-<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-2">
-<span class="material-symbols-outlined text-outline text-[18px] mr-1.5">location_on</span>
-<select class="w-full bg-transparent text-on-surface font-label-md text-label-md focus:outline-none appearance-none pr-4">
-<option>All Hubs</option>
-<option>Vapi GIDC</option>
-<option>Daman</option>
-<option>Silvassa</option>
-<option>Sarigam</option>
-<option>Umbergaon</option>
-</select>
-<span class="material-symbols-outlined absolute right-2 text-outline text-[16px] pointer-events-none">expand_more</span>
-</div>
-<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-2">
-<span class="material-symbols-outlined text-outline text-[18px] mr-1.5">category</span>
-<select class="w-full bg-transparent text-on-surface font-label-md text-label-md focus:outline-none appearance-none pr-4">
-<option>All Sectors</option>
-<option>Pharma / API</option>
-<option>Chemical</option>
-<option>Accounts &amp; Tax</option>
-<option>Production</option>
-<option>IT &amp; Back-office</option>
-</select>
-<span class="material-symbols-outlined absolute right-2 text-outline text-[16px] pointer-events-none">expand_more</span>
-</div>
-</div>
-<button class="w-full h-11 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform" type="button">
-<span class="material-symbols-outlined text-[20px]">search</span>
-        Find Industrial Jobs
-      </button>
-<!-- Popular Search Chips -->
-<div class="pt-space-xs">
-<span class="font-label-sm text-label-sm text-outline block mb-1.5">Hot Roles in Vapi:</span>
-<div class="flex items-center gap-1.5 overflow-x-auto pb-1 -mx-space-xs px-space-xs">
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">QC Chemist</span>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Tally Accountant</span>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Plant Maintenance</span>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">Store Officer</span>
-<span class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm">QA Executive</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Quick Action Cards: Two Paths -->
-<section class="px-gutter-mobile mb-space-lg">
-<div class="grid grid-cols-1 gap-space-sm">
-<!-- Seeker Card -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
-<div class="flex items-start justify-between mb-space-sm">
-<div>
-<span class="inline-block px-2 py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps mb-1">CANDIDATES</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">For Job Seekers</h2>
-</div>
-<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
-<span class="material-symbols-outlined text-[22px]">person_pin</span>
-</div>
-</div>
-<ul class="space-y-1.5 mb-space-md font-body-sm text-body-sm text-on-surface-variant">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[18px]">verified</span>
-            100% Free Placement — Zero Candidate Charges
-          </li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[18px]">event_available</span>
-            Direct Interview Lineups in Golden Corridor Hubs
-          </li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-primary text-[18px]">description</span>
-            Resume Optimization &amp; Salary Benchmark Guidance
-          </li>
-</ul>
-<button class="w-full h-10 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm" type="button">
-<span>Submit Your CV (Fast-Track)</span>
-<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-</button>
-</div>
-<!-- Employer Card -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
-<div class="flex items-start justify-between mb-space-sm">
-<div>
-<span class="inline-block px-2 py-0.5 rounded bg-surface-container-high text-secondary font-label-caps text-label-caps mb-1">CORPORATES</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">For Employers</h2>
-</div>
-<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
-<span class="material-symbols-outlined text-[22px]">domain</span>
-</div>
-</div>
-<ul class="space-y-1.5 mb-space-md font-body-sm text-body-sm text-on-surface-variant">
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px]">fact_check</span>
-            Pre-Screened Industrial &amp; Technical Talent
-          </li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px]">timer</span>
-            Rapid 48-Hour Shortlisting for Plant Roles
-          </li>
-<li class="flex items-center gap-2">
-<span class="material-symbols-outlined text-secondary text-[18px]">badge</span>
-            Bulk Operators to C-Level Leadership Sourcing
-          </li>
-</ul>
-<a class="w-full h-10 rounded-lg bg-on-surface text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm" href="tel:+918866421447">
-<span>Hire Talent / Request Proposal</span>
-<span class="material-symbols-outlined text-[18px]">call</span>
-</a>
-</div>
-</div>
-</section>
-<!-- Core Industry Verticals -->
-<section class="px-gutter-mobile mb-space-lg">
-<div class="flex items-center justify-between mb-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-primary uppercase">Sector Coverage</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Key Industry Verticals</h2>
-</div>
-<span class="font-label-sm text-label-sm text-primary font-bold">120+ Live Roles</span>
-</div>
-<div class="grid grid-cols-2 gap-space-xs">
-<!-- Sector 1 -->
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
-<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined text-[22px]">medication</span>
-</div>
-<span class="font-title-md text-title-md text-on-surface leading-tight mb-1">Pharma &amp; Healthcare</span>
-<span class="font-label-sm text-label-sm text-outline">48 openings</span>
-</div>
-<!-- Sector 2 -->
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
-<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined text-[22px]">science</span>
-</div>
-<span class="font-title-md text-title-md text-on-surface leading-tight mb-1">Chemical &amp; Petrochem</span>
-<span class="font-label-sm text-label-sm text-outline">34 openings</span>
-</div>
-<!-- Sector 3 -->
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
-<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined text-[22px]">precision_manufacturing</span>
-</div>
-<span class="font-title-md text-title-md text-on-surface leading-tight mb-1">Engineering &amp; Mfg</span>
-<span class="font-label-sm text-label-sm text-outline">26 openings</span>
-</div>
-<!-- Sector 4 -->
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
-<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined text-[22px]">account_balance</span>
-</div>
-<span class="font-title-md text-title-md text-on-surface leading-tight mb-1">Finance &amp; Tally</span>
-<span class="font-label-sm text-label-sm text-outline">19 openings</span>
-</div>
-<!-- Sector 5 -->
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
-<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined text-[22px]">local_shipping</span>
-</div>
-<span class="font-title-md text-title-md text-on-surface leading-tight mb-1">Logistics &amp; Supply</span>
-<span class="font-label-sm text-label-sm text-outline">14 openings</span>
-</div>
-<!-- Sector 6 -->
-<div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col justify-between">
-<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary mb-2">
-<span class="material-symbols-outlined text-[22px]">devices</span>
-</div>
-<span class="font-title-md text-title-md text-on-surface leading-tight mb-1">IT &amp; Support</span>
-<span class="font-label-sm text-label-sm text-outline">11 openings</span>
-</div>
-</div>
-</section>
-<!-- Featured Industrial Openings (Mobile Cards) -->
-<section class="px-gutter-mobile mb-space-lg">
-<div class="flex items-center justify-between mb-space-sm">
-<div>
-<span class="font-label-caps text-label-caps text-primary uppercase">Recent Postings</span>
-<h2 class="font-headline-sm text-headline-sm text-on-surface">Urgent Plant &amp; Office Openings</h2>
-</div>
-</div>
-<div class="space-y-space-sm">
-<!-- Card 1 -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative">
-<div class="flex items-center justify-between mb-1.5">
-<span class="px-2 py-0.5 rounded-full bg-surface-container text-primary font-label-sm text-label-sm">Chemical / API</span>
-<span class="font-label-md text-label-md text-primary font-bold">₹3.5 - 5.2 LPA</span>
-</div>
-<h3 class="font-title-md text-title-md text-on-surface font-semibold">Senior QC / QA Chemist</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-sm">Reputed API Manufacturer • HPLC &amp; Wet Chemistry</p>
-<div class="flex items-center justify-between pt-space-xs text-outline">
-<div class="flex items-center gap-3 font-label-sm text-label-sm">
-<span class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-primary">location_on</span>
-              Vapi GIDC
-            </span>
-<span class="flex items-center gap-1">
-<span class="material-symbols-outlined text-[16px] text-secondary">work_history</span>
-              3-6 Yrs
-            </span>
-</div>
-<button class="px-3.5 py-1.5 rounded-lg bg-primary text-on-primary font-label-sm text-label-sm font-semibold shadow-sm" type="button">
-            Apply Now
+<body class="bg-surface text-on-surface flex flex-col min-h-screen">
+  
+  <!-- Floating WhatsApp Support Button -->
+  <a href="https://wa.me/919998504479?text=Hi%20Skyline%20Careers,%20I%20have%20a%20query%20regarding%20job%20placement." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white p-3.5 rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform active:scale-95" aria-label="WhatsApp Support">
+    <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+      <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984 0 1.762.459 3.48 1.332 5.001l-1.416 5.169 5.291-1.387c1.467.8 3.118 1.222 4.781 1.223h.004c5.506 0 9.989-4.478 9.99-9.984 0-2.667-1.038-5.175-2.924-7.062a9.924 9.924 0 0 0-7.058-2.944zm5.184 14.195c-.214.601-1.248 1.157-1.722 1.205-.474.048-1.077.227-3.568-.781-2.983-1.207-4.887-4.242-5.037-4.442-.15-.2-1.218-1.621-1.218-3.092 0-1.471.768-2.195 1.042-2.493.274-.298.599-.373.799-.373.2 0 .4.002.574.011.184.01.428-.07.67.51.248.59.845 2.062.919 2.212.075.15.125.325.025.525-.1.2-.15.325-.299.5-.15.175-.315.391-.45.525-.15.15-.307.313-.132.613.175.3 0.778 1.284 1.67 2.08 1.147 1.022 2.112 1.338 2.412 1.488.3.15.475.125.65-.075.175-.2.749-.873.949-1.173.2-.3.4-.25.673-.15.275.1.1.748.871 3.593 1.742.846.871.075.125.175.2.225.225.6.025 1.201-.189 1.802z"/>
+    </svg>
+  </a>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full z-40 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div class="h-16 px-gutter-mobile flex items-center justify-between gap-space-sm">
+      <div class="flex items-center gap-space-sm min-w-0">
+        <img alt="Brand logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1V5oCkq2eW5QNJbHEO1xU0uMVlu6Mn0maMxGmaMP_N_qzOK3ALW4lwb7esd0deo9moA09ifwf4G1oAAjYoJV_YyjeSdi_WfEQzoLi4YSgNayQme1pDelvpkhHatVbDTgsCJzUvEtZB8k6I-nMN7EcoSzD8BSgmNoIXVFxQj5YiE2Ci6iULdVg_VdenX29X2SX7jCmeUg0meAVbOW1bYvkAxI9UbYr-7OED8nS7gGorO"/>
+        <div class="flex flex-col min-w-0">
+          <span class="font-label-caps text-label-caps text-primary tracking-wider uppercase truncate">Skyline Careers</span>
+          <h1 class="font-title-md text-title-md text-on-surface truncate">Employment Services</h1>
+        </div>
+      </div>
+      <div class="flex items-center gap-space-xs shrink-0">
+        <a aria-label="Call Support" class="w-11 h-11 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed hover:bg-primary hover:text-on-primary transition-colors" href="tel:+919998504479">
+          <span class="material-symbols-outlined text-[20px]">call</span>
+        </a>
+        <button aria-label="Menu" class="w-11 h-11 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button">
+          <span class="material-symbols-outlined text-[24px]">menu</span>
+        </button>
+        <div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-1 w-full bg-surface pt-16 pb-24 flex flex-col">
+    <div class="flex flex-col w-full">
+      
+      <!-- Top Region Badge & Hero Section -->
+      <section class="px-gutter-mobile pt-space-md pb-space-lg">
+        <div class="flex items-center gap-space-xs mb-space-sm">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary font-label-caps text-label-caps">
+            <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+            South Gujarat's #1 Recruitment Partner
+          </span>
+        </div>
+        <h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface tracking-tight mb-space-xs">
+          Connecting Talent with Opportunity Across Industries
+        </h1>
+        <p class="font-body-md text-body-md text-on-surface-variant mb-space-md">
+          Leading placement &amp; workforce recruitment consultancy headquartered in Vapi. Zero candidate fee for job seekers.
+        </p>
+        
+        <!-- Quick Stat Pill Counters -->
+        <div class="grid grid-cols-3 gap-space-xs mb-space-lg">
+          <div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col items-center text-center">
+            <span class="font-headline-sm text-headline-sm text-primary font-extrabold">10k+</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Placed</span>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col items-center text-center">
+            <span class="font-headline-sm text-headline-sm text-primary font-extrabold">500+</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Clients</span>
+          </div>
+          <div class="bg-surface-container-lowest rounded-xl p-space-sm shadow-sm flex flex-col items-center text-center">
+            <span class="font-headline-sm text-headline-sm text-primary font-extrabold">48h</span>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">TAT Match</span>
+          </div>
+        </div>
+
+        <!-- Mobile Job Search Widget -->
+        <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+          <div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-2">
+            <span class="material-symbols-outlined text-outline text-[20px] mr-2">search</span>
+            <input id="search-keyword" class="w-full bg-transparent text-on-surface font-body-md text-body-md focus:outline-none placeholder:text-outline" placeholder="Designation, skill or keyword" type="text"/>
+          </div>
+          <div class="grid grid-cols-2 gap-space-xs">
+            <div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-2">
+              <span class="material-symbols-outlined text-outline text-[18px] mr-1.5">location_on</span>
+              <select id="select-hub" class="w-full bg-transparent text-on-surface font-label-md text-label-md focus:outline-none appearance-none pr-4">
+                <option>All Hubs</option>
+                <option>Vapi GIDC</option>
+                <option>Daman</option>
+                <option>Silvassa</option>
+                <option>Sarigam</option>
+                <option>Umbergaon</option>
+              </select>
+              <span class="material-symbols-outlined absolute right-2 text-outline text-[16px] pointer-events-none">expand_more</span>
+            </div>
+            <div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-2">
+              <span class="material-symbols-outlined text-outline text-[18px] mr-1.5">category</span>
+              <select id="select-sector" class="w-full bg-transparent text-on-surface font-label-md text-label-md focus:outline-none appearance-none pr-4">
+                <option>All Sectors</option>
+                <option>Pharma / API</option>
+                <option>Chemical</option>
+                <option>Accounts &amp; Tax</option>
+                <option>Production</option>
+                <option>IT &amp; Back-office</option>
+              </select>
+              <span class="material-symbols-outlined absolute right-2 text-outline text-[16px] pointer-events-none">expand_more</span>
+            </div>
+          </div>
+          <button id="find-jobs-btn" class="w-full h-11 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform" type="button">
+            <span class="material-symbols-outlined text-[20px]">search</span>
+            Find Industrial Jobs
           </button>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-s
+
+          <!-- Popular Search Chips -->
+          <div class="pt-space-xs">
+            <span class="font-label-sm text-label-sm text-outline block mb-1.5">Hot Roles in Vapi:</span>
+            <div class="flex items-center gap-1.5 overflow-x-auto pb-1 -mx-space-xs px-space-xs">
+              <button onclick="applyHotRole('QC Chemist')" class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-container hover:text-white transition-colors">QC Chemist</button>
+              <button onclick="applyHotRole('Tally Accountant')" class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-container hover:text-white transition-colors">Tally Accountant</button>
+              <button onclick="applyHotRole('Plant Maintenance')" class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-container hover:text-white transition-colors">Plant Maintenance</button>
+              <button onclick="applyHotRole('Store Officer')" class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-container hover:text-white transition-colors">Store Officer</button>
+              <button onclick="applyHotRole('QA Executive')" class="shrink-0 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-primary-container hover:text-white transition-colors">QA Executive</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Action Cards: Two Paths -->
+      <section class="px-gutter-mobile mb-space-lg">
+        <div class="grid grid-cols-1 gap-space-sm">
+          
+          <!-- Seeker Card -->
+          <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-start justify-between mb-space-sm">
+              <div>
+                <span class="inline-block px-2 py-0.5 rounded bg-surface-container text-primary font-label-caps text-label-caps mb-1">CANDIDATES</span>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface">For Job Seekers</h2>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+                <span class="material-symbols-outlined text-[22px]">person_pin</span>
+              </div>
+            </div>
+            <ul class="space-y-1.5 mb-space-md font-body-sm text-body-sm text-on-surface-variant">
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[18px]">verified</span>
+                100% Free Placement — Zero Candidate Charges
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[18px]">event_available</span>
+                Direct Interview Lineups in Golden Corridor Hubs
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[18px]">description</span>
+                Resume Optimization &amp; Salary Benchmark Guidance
+              </li>
+            </ul>
+            <button onclick="toggleCvModal()" class="w-full h-10 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform" type="button">
+              <span>Submit Your CV (Fast-Track)</span>
+              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+            </button>
+          </div>
+
+          <!-- Employer Card -->
+          <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden flex flex-col justify-between">
+            <div class="flex items-start justify-between mb-space-sm">
+              <div>
+                <span class="inline-block px-2 py-0.5 rounded bg-surface-container-high text-secondary font-label-caps text-label-caps mb-1">CORPORATES</span>
+                <h2 class="font-headline-sm text-headline-sm text-on-surface">For Employers</h2>
+              </div>
+              <div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+                <span class="material-symbols-outlined text-[22px]">domain</span>
+              </div>
+            </div>
+            <ul class="space-y-1.5 mb-space-md font-body-sm text-body-sm text-on-surface-variant">
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-[18px]">fact_check</span>
+                Pre-Screened Industrial &amp; Technical Talent
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-[18px]">timer</span>
+                Rapid 48-Hour Shortlisting for Plant Roles
+              </li>
+              <li class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-secondary text-[18px]">badge</span>
+                Bulk Operators to C-Level Leadership Sourcing
+              </li>
+            </ul>
+            <a class="w-full h-10 rounded-lg bg-on-surface text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm" href="tel:+919998504479">
+              <span>Hire Talent / Request Proposal</span>
+              <span class="material-symbols-outlined text-[18px]">call</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Core Industry Verticals -->
+      <section class="px-gutter-mobile mb-space-lg">
+        <div class="flex items-center justify-between mb-space-sm">
+          <div>
+            <spa
