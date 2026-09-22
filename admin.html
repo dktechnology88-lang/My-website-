@@ -53,7 +53,7 @@
         </div>
       </div>
 
-      <!-- Direct File Upload Field -->
+      <!-- Direct Gallery File Upload Field -->
       <div>
         <label class="text-xs font-semibold text-gray-600 block mb-1">Upload Poster / Image (Optional)</label>
         <input type="file" id="job-file" accept="image/*" class="w-full p-2 border rounded-lg text-xs bg-gray-50"/>
@@ -93,6 +93,16 @@
       }
     }
 
+    // Helper Function: Convert Image File to Base64 String
+    function convertFileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = () => resolve(reader.result);
+        reader.onerror = error => reject(error);
+      });
+    }
+
     async function postJob() {
       const title = document.getElementById('job-title').value.trim();
       const country = document.getElementById('job-country').value;
@@ -104,34 +114,24 @@
       if (!title) { alert('Please enter Job Title'); return; }
 
       const btn = document.getElementById('post-btn');
-      btn.innerText = 'Uploading & Publishing...';
+      btn.innerText = 'Publishing...';
       btn.disabled = true;
 
       let image_url = null;
 
-      // Upload file directly to Supabase Storage if selected
       if (file) {
-        const fileExt = file.name.split('.').pop();
-        const fileName = `${Date.now()}.${fileExt}`;
-        const { data, error: uploadError } = await _supabase.storage
-          .from('job-posters')
-          .upload(fileName, file);
-
-        if (uploadError) {
-          alert('Image upload failed: ' + uploadError.message);
+        try {
+          // Convert image directly to Base64 (No Supabase Storage needed)
+          image_url = await convertFileToBase64(file);
+        } catch (e) {
+          alert('Failed to process image file');
           btn.innerText = 'Publish Job';
           btn.disabled = false;
           return;
         }
-
-        const { data: urlData } = _supabase.storage
-          .from('job-posters')
-          .getPublicUrl(fileName);
-        
-        image_url = urlData.publicUrl;
       }
 
-      // Insert job into table
+      // Save directly into jobs table
       const { error } = await _supabase.from('jobs').insert([{ title, country, sector, image_url, description }]);
 
       if (error) {
