@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
   </style>
@@ -62,42 +63,21 @@
       <p class="text-xs sm:text-sm text-gray-600 mb-4">
         We connect skilled workers and professionals with direct employers in Dubai, Qatar, Kuwait, Saudi Arabia, Europe &amp; USA.
       </p>
+    </section>
 
-      <!-- Search Widget -->
-      <div class="bg-gray-50 rounded-xl p-3.5 border border-gray-200 space-y-2.5">
-        <div class="flex items-center bg-white rounded-lg px-3 py-2 border border-gray-300">
-          <span class="material-symbols-outlined text-gray-400 text-xl mr-2">search</span>
-          <input id="search-keyword" class="w-full bg-transparent text-xs sm:text-sm focus:outline-none text-gray-800 placeholder-gray-400" placeholder="Job title or skill (e.g. Driver, Welder, Helper)" type="text"/>
-        </div>
-        
-        <div class="grid grid-cols-2 gap-2">
-          <div class="flex items-center bg-white rounded-lg px-2.5 py-1.5 border border-gray-300">
-            <span class="material-symbols-outlined text-gray-400 text-base mr-1">public</span>
-            <select id="select-hub" class="w-full bg-transparent text-xs font-medium text-gray-700 focus:outline-none">
-              <option>Dubai (UAE)</option>
-              <option>Saudi Arabia</option>
-              <option>Qatar</option>
-              <option>Kuwait</option>
-              <option>Europe</option>
-              <option>USA</option>
-            </select>
-          </div>
-          <div class="flex items-center bg-white rounded-lg px-2.5 py-1.5 border border-gray-300">
-            <span class="material-symbols-outlined text-gray-400 text-base mr-1">category</span>
-            <select id="select-sector" class="w-full bg-transparent text-xs font-medium text-gray-700 focus:outline-none">
-              <option>All Sectors</option>
-              <option>Construction &amp; Technical</option>
-              <option>Drivers &amp; Operators</option>
-              <option>Oil &amp; Gas</option>
-              <option>Hotel &amp; Hospitality</option>
-            </select>
-          </div>
-        </div>
-
-        <button id="find-jobs-btn" class="w-full h-10 rounded-lg bg-[#006194] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow active:scale-[0.98] transition-transform" type="button">
-          <span class="material-symbols-outlined text-lg">search</span>
-          Search Foreign Vacancies
-        </button>
+    <!-- Dynamic Latest Vacancies Section -->
+    <section class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-200">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="text-base sm:text-lg font-bold text-gray-900 flex items-center gap-2">
+          <span class="material-symbols-outlined text-[#006194]">work</span>
+          Latest Urgent Vacancies
+        </h2>
+        <span class="px-2 py-0.5 rounded bg-green-100 text-green-700 text-[10px] font-bold">LIVE</span>
+      </div>
+      
+      <!-- Jobs Container -->
+      <div id="jobs-container" class="space-y-3">
+        <p class="text-xs text-gray-500 py-4 text-center">Loading vacancies...</p>
       </div>
     </section>
 
@@ -117,63 +97,12 @@
           <span class="material-symbols-outlined text-[#006194] text-base">assignment_turned_in</span>
           Complete Visa Processing &amp; Medical Guidance
         </li>
-        <li class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-[#006194] text-base">public</span>
-          Placements in Dubai, Qatar, Kuwait, Saudi, Europe &amp; USA
-        </li>
       </ul>
       
-      <!-- WhatsApp Submit CV Button -->
       <a href="https://wa.me/919998504479?text=Hi%20Skyline%20Careers,%20I%20want%20to%20submit%20my%20CV%20for%20International%20Job%20Vacancies." target="_blank" class="w-full h-11 rounded-xl bg-[#006194] text-white font-bold text-xs sm:text-sm flex items-center justify-center gap-2 shadow-md active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-lg">send</span>
         <span>Submit Your CV (WhatsApp)</span>
       </a>
-    </section>
-
-    <!-- Employers Section -->
-    <section class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-200">
-      <div class="flex items-center justify-between mb-2">
-        <span class="px-2.5 py-0.5 rounded bg-gray-100 text-gray-700 text-[10px] font-bold tracking-wider uppercase">CLIENTS &amp; AGENTS</span>
-        <span class="material-symbols-outlined text-gray-700 text-xl">domain</span>
-      </div>
-      <h2 class="text-base sm:text-lg font-bold text-gray-900 mb-2">For Overseas Employers</h2>
-      <ul class="space-y-2 mb-4 text-xs text-gray-600">
-        <li class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-gray-700 text-base">badge</span>
-          Skilled &amp; Unskilled Technical Manpower Sourcing
-        </li>
-        <li class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-gray-700 text-base">gavel</span>
-          Fast-Track Trade Testing &amp; Deployment Processing
-        </li>
-      </ul>
-      <a class="w-full h-10 rounded-xl bg-gray-900 text-white font-bold text-xs flex items-center justify-center gap-2 shadow active:scale-95 transition-transform" href="tel:+919998504479">
-        <span>Contact Vapi Desk</span>
-        <span class="material-symbols-outlined text-base">call</span>
-      </a>
-    </section>
-
-    <!-- Hiring Destinations Grid -->
-    <section class="bg-white rounded-2xl p-4 sm:p-5 shadow-sm border border-gray-200">
-      <h2 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2.5">Top Hiring Destinations</h2>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
-        <div class="p-2.5 bg-gray-50 rounded-lg border border-gray-200">
-          <span class="font-bold text-xs text-gray-900 block">Dubai (UAE)</span>
-          <span class="text-[10px] text-gray-500">Drivers, Hotel, Trade</span>
-        </div>
-        <div class="p-2.5 bg-gray-50 rounded-lg border border-gray-200">
-          <span class="font-bold text-xs text-gray-900 block">Saudi Arabia</span>
-          <span class="text-[10px] text-gray-500">Oil &amp; Gas, Mechanics</span>
-        </div>
-        <div class="p-2.5 bg-gray-50 rounded-lg border border-gray-200">
-          <span class="font-bold text-xs text-gray-900 block">Qatar &amp; Kuwait</span>
-          <span class="text-[10px] text-gray-500">Technicians, Helpers</span>
-        </div>
-        <div class="p-2.5 bg-gray-50 rounded-lg border border-gray-200">
-          <span class="font-bold text-xs text-gray-900 block">Europe &amp; USA</span>
-          <span class="text-[10px] text-gray-500">Skilled Trades</span>
-        </div>
-      </div>
     </section>
 
   </main>
@@ -183,16 +112,43 @@
   </footer>
 
   <script>
-    document.getElementById('find-jobs-btn').addEventListener('click', function() {
-      const keyword = document.getElementById('search-keyword').value.trim();
-      const country = document.getElementById('select-hub').value;
-      const sector = document.getElementById('select-sector').value;
-      
-      const msg = `Hi Skyline Careers (Vapi), I am looking for ${keyword || 'Jobs'} in ${country} (${sector}).`;
-      window.open(`https://wa.me/919998504479?text=${encodeURIComponent(msg)}`, '_blank');
-    });
+    const SUPABASE_URL = "https://vhxfybcrpjarwocpbelc.supabase.co";
+    const SUPABASE_KEY = "sb_publishable_UTayZu405y7fcwFilXwJqA_ZtfE_XxD";
+    const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+    async function loadJobs() {
+      const container = document.getElementById('jobs-container');
+      const { data: jobs, error } = await _supabase.from('jobs').select('*').order('created_at', { ascending: false });
+
+      if (error || !jobs || jobs.length === 0) {
+        container.innerHTML = '<p class="text-xs text-gray-500 py-3 text-center bg-gray-50 rounded-lg">No vacancies currently open. Direct WhatsApp us to apply!</p>';
+        return;
+      }
+
+      container.innerHTML = jobs.map(job => `
+        <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200 space-y-2">
+          <div class="flex items-start justify-between gap-2">
+            <div>
+              <h3 class="font-bold text-sm text-gray-900">${job.title}</h3>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="inline-flex items-center gap-1 text-[11px] font-bold text-[#006194] bg-blue-50 px-2 py-0.5 rounded">
+                  <span class="material-symbols-outlined text-xs">public</span> ${job.country}
+                </span>
+                <span class="text-[11px] text-gray-500 font-medium">${job.sector || 'General'}</span>
+              </div>
+            </div>
+          </div>
+          ${job.description ? `<p class="text-xs text-gray-600 border-t border-gray-200 pt-2 mt-1">${job.description}</p>` : ''}
+          <a href="https://wa.me/919998504479?text=${encodeURIComponent(`Hi Skyline Careers, I am interested in applying for: ${job.title} (${job.country})`)}" target="_blank" class="w-full h-9 rounded-lg bg-[#25D366] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform mt-2">
+            <span>Apply via WhatsApp</span>
+            <span class="material-symbols-outlined text-base">send</span>
+          </a>
+        </div>
+      `).join('');
+    }
+
+    loadJobs();
   </script>
 
 </body>
-      </html>
-      
+</html>
