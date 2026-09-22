@@ -26,10 +26,9 @@
     <button onclick="checkPass()" class="w-full bg-[#006194] text-white font-bold py-2.5 rounded-lg text-sm">Login</button>
   </div>
 
-  <!-- Admin Panel Content (Hidden initially) -->
+  <!-- Admin Panel Content -->
   <div id="admin-panel" class="hidden space-y-4">
     
-    <!-- Add Job Form -->
     <div class="bg-white p-4 rounded-2xl shadow-sm border space-y-3">
       <h2 class="font-bold text-sm text-gray-800 border-b pb-2">Post New Job Vacancy</h2>
       <div>
@@ -53,6 +52,13 @@
           <input type="text" id="job-sector" placeholder="e.g. Transport, Hotel" class="w-full p-2 border rounded-lg text-xs"/>
         </div>
       </div>
+
+      <!-- Direct File Upload Field -->
+      <div>
+        <label class="text-xs font-semibold text-gray-600 block mb-1">Upload Poster / Image (Optional)</label>
+        <input type="file" id="job-file" accept="image/*" class="w-full p-2 border rounded-lg text-xs bg-gray-50"/>
+      </div>
+
       <div>
         <label class="text-xs font-semibold text-gray-600 block mb-1">Description / Salary Details</label>
         <textarea id="job-desc" placeholder="Salary, duty hours, accommodation details..." class="w-full p-2 border rounded-lg text-xs h-20"></textarea>
@@ -60,7 +66,6 @@
       <button onclick="postJob()" id="post-btn" class="w-full bg-[#006194] text-white font-bold py-2.5 rounded-lg text-xs shadow">Publish Job</button>
     </div>
 
-    <!-- Live Posted Jobs -->
     <div class="bg-white p-4 rounded-2xl shadow-sm border space-y-3">
       <h2 class="font-bold text-sm text-gray-800">Manage Active Vacancies</h2>
       <div id="admin-jobs-list" class="space-y-2">
@@ -75,7 +80,6 @@
     const SUPABASE_KEY = "sb_publishable_UTayZu405y7fcwFilXwJqA_ZtfE_XxD";
     const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    // Default password (Change if needed)
     const SECRET_PASS = "skyline123";
 
     function checkPass() {
@@ -94,14 +98,41 @@
       const country = document.getElementById('job-country').value;
       const sector = document.getElementById('job-sector').value.trim();
       const description = document.getElementById('job-desc').value.trim();
+      const fileInput = document.getElementById('job-file');
+      const file = fileInput.files[0];
 
       if (!title) { alert('Please enter Job Title'); return; }
 
       const btn = document.getElementById('post-btn');
-      btn.innerText = 'Publishing...';
+      btn.innerText = 'Uploading & Publishing...';
       btn.disabled = true;
 
-      const { error } = await _supabase.from('jobs').insert([{ title, country, sector, description }]);
+      let image_url = null;
+
+      // Upload file directly to Supabase Storage if selected
+      if (file) {
+        const fileExt = file.name.split('.').pop();
+        const fileName = `${Date.now()}.${fileExt}`;
+        const { data, error: uploadError } = await _supabase.storage
+          .from('job-posters')
+          .upload(fileName, file);
+
+        if (uploadError) {
+          alert('Image upload failed: ' + uploadError.message);
+          btn.innerText = 'Publish Job';
+          btn.disabled = false;
+          return;
+        }
+
+        const { data: urlData } = _supabase.storage
+          .from('job-posters')
+          .getPublicUrl(fileName);
+        
+        image_url = urlData.publicUrl;
+      }
+
+      // Insert job into table
+      const { error } = await _supabase.from('jobs').insert([{ title, country, sector, image_url, description }]);
 
       if (error) {
         alert('Error posting job: ' + error.message);
@@ -110,6 +141,7 @@
         document.getElementById('job-title').value = '';
         document.getElementById('job-sector').value = '';
         document.getElementById('job-desc').value = '';
+        fileInput.value = '';
         loadAdminJobs();
       }
       btn.innerText = 'Publish Job';
