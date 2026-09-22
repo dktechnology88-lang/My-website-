@@ -126,47 +126,65 @@
     © Skyline Careers Vapi Gujarat. Overseas Employment Services.
   </footer>
 
-  <script>
-    const SUPABASE_URL = "https://vhxfybcrpjarwocpbelc.supabase.co";
+    <script>
+    const SUPABASE_URL = "https://vhxfybcprjarwocpbelc.supabase.co";
     const SUPABASE_KEY = "sb_publishable_UTayZu405y7fcwFilXwJqA_ZtfE_XxD";
     const _supabase = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-    aasync function loadJobs() {
-  const container = document.getElementById('jobs-container');
-  const { data: jobs, error } = await _supabase.from('jobs').select('*').order('created_at', { ascending: false });
+    let allJobs = [];
 
-  if (error || !jobs || jobs.length === 0) {
-    container.innerHTML = '<p class="text-xs text-gray-500 py-3 text-center bg-gray-50 rounded-lg">No vacancies currently open. Direct WhatsApp us to apply!</p>';
-    return;
-  }
+    async function loadJobs() {
+      const container = document.getElementById('jobs-container');
+      const { data: jobs, error } = await _supabase.from('jobs').select('*').order('created_at', { ascending: false });
 
-  renderJobs(jobs);
+      if (error || !jobs || jobs.length === 0) {
+        container.innerHTML = '<p class="text-xs text-gray-500 py-3 text-center bg-gray-50 rounded-lg">No vacancies currently open. Direct WhatsApp us to apply!</p>';
+        return;
+      }
+
+      allJobs = jobs;
+      renderJobs(allJobs);
     }
-    
-      container.innerHTML = jobs.map(job => `
-        <div class="p-3.5 bg-gray-50 rounded-xl border border-gray-200 space-y-2">
-          <div class="flex items-start justify-between gap-2">
+
+    function renderJobs(jobsList) {
+      const container = document.getElementById('jobs-container');
+      if (!jobsList || jobsList.length === 0) {
+        container.innerHTML = '<p class="text-xs text-gray-500 py-3 text-center bg-gray-50 rounded-lg">No vacancies found for this filter.</p>';
+        return;
+      }
+
+      container.innerHTML = jobsList.map(j => `
+        <div class="bg-white rounded-2xl border shadow-sm p-4 mb-3 space-y-3">
+          <div class="flex justify-between items-start">
             <div>
-              <h3 class="font-bold text-sm text-gray-900">${job.title}</h3>
-              <div class="flex items-center gap-2 mt-1">
-                <span class="inline-flex items-center gap-1 text-[11px] font-bold text-[#006194] bg-blue-50 px-2 py-0.5 rounded">
-                  <span class="material-symbols-outlined text-xs">public</span> ${job.country}
-                </span>
-                <span class="text-[11px] text-gray-500 font-medium">${job.sector || 'General'}</span>
-              </div>
+              <span class="text-[10px] bg-blue-50 text-[#006194] px-2 py-0.5 rounded-full font-bold">${j.country || 'Overseas'}</span>
+              <h2 class="font-bold text-sm text-gray-800 mt-1">${j.title}</h2>
+              <p class="text-xs text-gray-500">${j.sector || 'General'}</p>
             </div>
           </div>
-          ${job.description ? `<p class="text-xs text-gray-600 border-t border-gray-200 pt-2 mt-1">${job.description}</p>` : ''}
-          <a href="https://wa.me/919998504479?text=${encodeURIComponent(`Hi Skyline Careers, I am interested in applying for: ${job.title} (${job.country})`)}" target="_blank" class="w-full h-9 rounded-lg bg-[#25D366] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform mt-2">
-            <span>Apply via WhatsApp</span>
-            <span class="material-symbols-outlined text-base">send</span>
-          </a>
+          
+          ${j.image_url ? `<img src="${j.image_url}" class="w-full rounded-xl object-cover border max-h-60" alt="Job Poster"/>` : ''}
+
+          ${j.description ? `<p class="text-xs text-gray-600 bg-gray-50 p-2.5 rounded-xl border">${j.description}</p>` : ''}
+          
+          <a href="https://wa.me/919000000000?text=Hello%20Skyline%20Careers,%20I%20am%20interested%20in%20${encodeURIComponent(j.title)}" target="_blank" class="block text-center bg-[#25D366] text-white text-xs font-bold py-2.5 rounded-xl shadow">Apply via WhatsApp</a>
         </div>
       `).join('');
     }
 
+    function filterJobs() {
+      const selected = document.getElementById('country-filter').value;
+      if (!selected || selected === 'ALL') {
+        renderJobs(allJobs);
+      } else {
+        const filtered = allJobs.filter(j => j.country && j.country.trim().toLowerCase() === selected.trim().toLowerCase());
+        renderJobs(filtered);
+      }
+    }
+
     loadJobs();
-  </script>
+    </script>
+  
 
 </body>
 </html>
